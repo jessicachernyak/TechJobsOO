@@ -12,6 +12,7 @@ namespace TechJobs.Data
          */
 
         public List<Job> Jobs { get; set; } = new List<Job>();
+        // public JobFieldData<Name> Name { get; set; } = new JobFieldData<Name>();
         public JobFieldData<Employer> Employers { get; set; } = new JobFieldData<Employer>();
         public JobFieldData<Location> Locations { get; set; } = new JobFieldData<Location>();
         public JobFieldData<PositionType> PositionTypes { get; set; } = new JobFieldData<PositionType>();
@@ -22,7 +23,7 @@ namespace TechJobs.Data
         {
             JobDataImporter.LoadData(this);
         }
-
+         
         private static JobData instance;
         public static JobData GetInstance()
         {
@@ -100,6 +101,11 @@ namespace TechJobs.Data
                           select j;
 
             return results.Single();
+        }
+
+        public void Add(Job job)
+        {
+            Jobs.Add(job);
         }
 
     }

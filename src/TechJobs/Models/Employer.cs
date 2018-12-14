@@ -2,6 +2,10 @@
 {
     public class Employer : JobField
     {
-        // No additional members yet. See JobField.cs
+        // address
+
+        // primary contact Dict(name, number)
+
+        // public List<string> Jobs = new List<string>;
     }
 }
